@@ -498,7 +498,24 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+
+			case 'trs':
+				frames = Paths.getSparrowAtlas('characters/trs/trs');
+				animation.addByPrefix('idle', 'trs Idle', 24, false);
+				animation.addByPrefix('singUP', 'trs UP', 24, false);
+				animation.addByPrefix('singDOWN', 'trs DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'trs LEFT', 24, false);
+				animation.addByPrefix('singRIGHT', 'trs RIGHT', 24, false);
+
+				addOffset('idle');
+				addOffset('singUp');
+				addOffset('singDOWN');
+				addOffset('singLEFT');
+				addOffset('singRIGHT');
+
+				playAnim('idle');
 		}
+		
 
 		dance();
 
